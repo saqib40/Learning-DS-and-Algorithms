@@ -4,7 +4,7 @@ that can be accessed using an index. By contiguous,
 we mean the elements of the array are adjacent to one
 another in memory with no gaps between them, and by homogeneous
 we mean they are all of the same data type. The index of an array of
-size N can range from 0 to NH1. In a static array, we declare size initially but in a
+size N can range from 0 to N-1. In a static array, we declare size initially but in a
 dynamic array, the size increases as more elements are added to the array.
 In python, both are the same thing.
 """
