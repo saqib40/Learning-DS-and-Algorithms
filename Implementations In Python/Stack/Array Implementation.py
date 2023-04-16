@@ -24,7 +24,7 @@ print(myStack)
 #edge case of overflow manually
 #Why we need this case is that appending takes constant time 
 #except when overflow happens 
-#In the case above appending always going has time complexity of O(n)
+#In the case above appending operation always has time complexity of O(n)
 
 A = [0] * 10 #An integer array of size 10, it will look like this; [0,0,0,...]
 
