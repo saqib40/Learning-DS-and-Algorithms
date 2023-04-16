@@ -1,4 +1,4 @@
-#Here' linked list implementation 
+#Here's linked list implementation 
 #Preferred cause no need to worry about overflow / memory exhaustion 
 #unless you exhaust the memory of system
 #One con is extra memory is used to store pointer variables
