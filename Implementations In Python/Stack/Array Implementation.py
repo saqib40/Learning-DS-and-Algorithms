@@ -26,7 +26,7 @@ print(myStack)
 #except when overflow happens 
 #In the case above appending operation always has time complexity of O(n)
 
-A = [0] * 10 #An integer array of size 10, it will look like this; [0,0,0,...]
+A = [0] * 10 #An integer array of size 10, it will look like this; [0,0,0,...], if size of array is m and we are multiplying by n then time complexity will be O(mn)
 
 top = -1
 
