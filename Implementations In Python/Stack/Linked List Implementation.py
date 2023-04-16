@@ -1,4 +1,4 @@
-#Here's linked list implementation 
+#Here's linked list implementation of stack
 #Preferred cause no need to worry about overflow / memory exhaustion 
 #unless you exhaust the memory of system
 #One con is extra memory is used to store pointer variables
