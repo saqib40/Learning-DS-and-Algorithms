@@ -28,5 +28,8 @@ class Stack:
     def isEmpty(self):
         return True if self.top == None else False
     
-    def top(self):
+    def peek(self):
+        if self.top == None:
+            print('No elements in stack')
+            return
         return self.top.data
