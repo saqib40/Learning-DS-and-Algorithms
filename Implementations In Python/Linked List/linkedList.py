@@ -127,7 +127,7 @@ class linkedList:
             return
         self.reverseRecursively(currentNode.pointer)
         currentNode.pointer.pointer = currentNode
-        currentNode.pointer = None
+        currentNode.pointer = None #this is the only line idk why it's here
         
     
     #Searching
