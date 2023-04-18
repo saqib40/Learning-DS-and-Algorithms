@@ -46,3 +46,27 @@ class linkedList:
 
 
 #Check for balanced parantheses in the given string
+def pairCheck(opening, closing):
+    if closing == ')' and opening == '(':
+        return True
+    elif closing == '}' and opening == '{':
+        return True
+    elif closing == ']' and  opening == '[':
+        return True
+    else:
+        return False
+
+def checkBalanced(exp):
+    n = len(exp)
+    S = Stack()
+    i = 0
+    while i < n:
+        if exp[i] == '(' or exp[i] == '{' or exp[i] == '[':
+            S.push(exp[i])
+        else:
+            if S.isEmpty() or pairCheck(S.peek(), exp[i]) == False:
+                return False
+            else:
+                S.pop()
+        i += 1
+    return True if S.isEmpty() else False
