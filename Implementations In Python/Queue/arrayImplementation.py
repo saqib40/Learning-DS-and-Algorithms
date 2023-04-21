@@ -45,7 +45,7 @@ def dequeue():
     else:
         front = (front + 1) % n
 
-def printQueue(): #printing elements of circular array
+def printQueue():
     i = front
     myString = ''
     while i != rear:
