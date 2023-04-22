@@ -23,7 +23,7 @@ class Queue:
         else:
             myNode = self.front #we did this
             self.front = self.front.pointer
-            del myNode # and we did this to free the memory
+            del myNode # and we did this to free the memory (but we don't need to do it here cause once reference count reaches zero it happens in python automatically)
     
     def isEmpty(self):
         if self.front == None and self.rear == None:
