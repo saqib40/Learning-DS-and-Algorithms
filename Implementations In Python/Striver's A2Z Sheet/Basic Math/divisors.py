@@ -32,12 +32,10 @@ def sumOfDivisors3(N):
         result += answer
     return result
 
-# Method 3; TLE
+# Method 3; Worked
 # We are working with multiples here
 def sumOfDivisors3(N):
     result = 0
     for i in range(1, N+1):
-        result += int(N/i) * i
+        result += N//i * i #Interestingly I learned that N//i is much time effective than int(N/i)
     return result
-
-# Method 4; Using sieve of erathosthenes
