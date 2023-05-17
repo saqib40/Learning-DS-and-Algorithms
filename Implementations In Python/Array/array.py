@@ -23,13 +23,14 @@ def search(element, array):
     return False
 
 #Writing a program to reverse an array; Time complexity O(n)
-def reverse(array):
-    reversedArray = []
-    i = len(array) - 1
-    while i >= 0:
-        reversedArray.append(array[i])
-        i -= 1
-    return reversedArray
+def reverse(myArr):
+  n = len(myArr)
+  reversedArray = [0] * n
+  i = n
+  while i > 0:
+    reversedArray[n - i] = myArr[i - 1]
+    i -= 1
+  return reversedArray
 
 #reversing with recursion
 
