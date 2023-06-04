@@ -1,3 +1,5 @@
+import random
+
 def partition(A, start, end):
   pivot = A[end]
   pIndex = start
@@ -12,9 +14,15 @@ def partition(A, start, end):
   A[pIndex] = temp
   return pIndex
 
+def randomizedPartition(A, start, end):
+    pivotIndex = random.randrange(start, end)
+    temp = A[end]
+    A[end] = A[pivotIndex]
+    A[pivotIndex] = temp
+    return partition(A, start, end)
 
 def quickSort(A, start, end):
   if start < end:
-    pIndex = partition(A, start, end)
+    pIndex = randomizedPartition(A, start, end)
     quickSort(A, start, pIndex - 1)
     quickSort(A, pIndex + 1, end)
