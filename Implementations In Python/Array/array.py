@@ -1,3 +1,5 @@
+# Lot's of mistakes in this one
+
 """
 An array is a contiguous collection of homogeneous elements
 that can be accessed using an index. By contiguous,
