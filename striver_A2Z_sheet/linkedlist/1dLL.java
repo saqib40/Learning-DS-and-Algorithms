@@ -22,6 +22,7 @@ public class 1dLL {
                 Node temp = this.head;
                 while(j<i-1 && temp.pointer != null) {
                     temp = temp.pointer;
+                    j++;
                 }
                 temp.pointer = new Node(data,temp.pointer);
             }

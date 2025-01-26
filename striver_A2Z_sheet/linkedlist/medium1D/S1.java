@@ -26,4 +26,14 @@ public class S1 {
         slow.next = slow.next.next;
         return head;
     }
+    // leetcode
+    public ListNode middleNode2(ListNode head) {
+        ListNode slow = head;
+        ListNode fast = head;
+        while(fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return slow;
+    }
 }

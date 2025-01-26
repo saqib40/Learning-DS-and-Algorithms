@@ -63,4 +63,15 @@ public class S4 {
         }
         return i+1; // + 1 cause even though we have assumed one unique value initially we initialised i with 0 for index reasons 
     }
+    // won't modify the array inplace so won't work
+    public static int removeDuplicates3(int[] nums) {
+        int n = nums.length;
+        int count = 0;
+        for(int i=0; i<n-1; i++) {
+            if(nums[i]!=nums[i+1]) {
+                count++;
+            }
+        }
+        return count+1;
+    }
 }

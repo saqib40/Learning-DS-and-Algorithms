@@ -18,6 +18,6 @@ public class S5 {
             }
             temp = temp.next;
         }
-        return (temp.data==key) ? true:false;
+        return (temp.data==key) ? true:false; // to handle last node
     }
 }
