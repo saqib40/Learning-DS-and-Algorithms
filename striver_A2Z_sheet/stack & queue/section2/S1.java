@@ -2,10 +2,7 @@ import java.util.Stack;
 
 public class S1 {
     public static boolean isOperand(char s) {
-        if(s=='^' || s=='+' || s=='-' || s=='*' || s=='/') {
-            return false;
-        }
-        return true;
+        return Character.isLetterOrDigit(s);
     }
     public static boolean isOpeningParan(char c) {
         if(c == '(' || c == '[' || c == '{') {
