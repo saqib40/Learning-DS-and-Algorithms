@@ -1,5 +1,6 @@
 package oops.singleton;
-
+// beautiful example
+// as always by Kunal Khushwaha
 public class Singleton {
     private Singleton() {
 
