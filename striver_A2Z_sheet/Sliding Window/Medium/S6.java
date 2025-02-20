@@ -16,9 +16,9 @@ public class S6 {
                     r++;
                 }
                 return count;
-            }
-        public int numberOfSubarrays(int[] nums, int k) {
-            return lessOrEq(nums,k) - lessOrEq(nums,k-1);
         }
+    public int numberOfSubarrays(int[] nums, int k) {
+        return lessOrEq(nums,k) - lessOrEq(nums,k-1);
+    }
     }
 }
