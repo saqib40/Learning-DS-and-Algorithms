@@ -6,7 +6,6 @@ public class S7 {
         int data;
         TreeNode left;
         TreeNode right;
-   
         TreeNode(int data) {
             this.data = data;
             this.left = null;
@@ -49,7 +48,6 @@ public class S7 {
         }
     }
     public static List<Integer> traverseBoundary(TreeNode root){
-        // Write your code here.
         ArrayList<Integer> ans = new ArrayList<>();
         if (root == null) return ans;
         if (!isLeaf(root)) ans.add(root.data);

@@ -1,6 +1,6 @@
 public class S2 {
     // method 1; Two traversals
-    // method 2; single traversal using DNF Algorithm
+    // method 2; single traversal using DNF (Dutch National Flag) Algorithm
     public void swap(int A, int B) {
         int temp = A;
         A = B;
@@ -11,16 +11,16 @@ public class S2 {
         int mid = 0;
         int high = nums.length;
         while(mid<=high) {
-            if(mid==0) {
-                swap(nums[low],nums[high]);
+            if(nums[mid]==0) {
+                swap(nums[low],nums[mid]);
                 low++;
                 mid++;
             }
-            else if(mid==1) {
+            else if(nums[mid]==1) {
                 mid++;
             }
             else {
-                swap(nums[low],nums[high]);
+                swap(nums[mid],nums[high]);
                 high--;
             }
         }

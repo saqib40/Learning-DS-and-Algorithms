@@ -21,8 +21,6 @@ public class S2 {
             return root.data;
         }
         else if (key < root.data) {
-            //ceil = root.data;
-            //floor = Math.max(root.data,floor);
             return floor(root.left,key,floor);
         }
         else {

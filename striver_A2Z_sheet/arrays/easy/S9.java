@@ -3,6 +3,7 @@ import java.util.Map;
 import java.util.TreeMap;
 
 public class S9 {
+    // you can just use a simple hashset for the job
     // using a tree map, TC is O((m+n)*Log(m+n))
     public static ArrayList<Integer> findUnion(int arr1[], int arr2[], int n, int m)
     {
@@ -21,45 +22,44 @@ public class S9 {
         return arr;
     }
     // using two pointers, TC is O(m+n); works fine but ironically throws TLE
-    public static ArrayList<Integer> findUnion2(int arr1[], int arr2[], int n, int m) {
+    public static ArrayList<Integer> findUnion(int a[], int b[]) {
+        // add your code here
         ArrayList<Integer> arr = new ArrayList<>();
-        int i = 0; // to n
-        int j = 0; // to m
+        int n = a.length;
+        int i = 0;
+        int m = b.length;
+        int j = 0;
         while(i<n && j<m) {
-            if(arr1[i] == arr2[j]) {
-                if(arr.size() == 0 || arr.get(arr.size()-1) != arr1[i]) { // to avoid duplication
-                    arr.add(arr1[i]);
-                    i++;
-                    j++;
+            if(a[i] == b[j]) {
+                if(arr.size() == 0 || arr.get(arr.size()-1) != a[i]) { // to avoid duplication
+                    arr.add(a[i]);
                 }
-                continue;
+                i++; j++;
             }
-            if(arr1[i] > arr2[j]) {
-                if(arr.size() == 0 || arr.get(arr.size()-1) != arr2[j]) {
-                    arr.add(arr2[j]);
-                    j++;
+            else if(a[i] > b[j]) {
+                if(arr.size() == 0 || arr.get(arr.size()-1) != b[j]) {
+                    arr.add(b[j]);
                 }
-                continue;
+                j++;
             }
-            if(arr1[i] < arr2[j]) {
-                if(arr.size() == 0 || arr.get(arr.size()-1) != arr1[i]) {
-                    arr.add(arr1[i]);
-                    i++;
+            else {
+                if(arr.size() == 0 || arr.get(arr.size()-1) != a[i]) {
+                    arr.add(a[i]);
                 }
-                continue;
-            }
-        }
-        while(i<n) {
-            if(arr.get(arr.size()-1) != arr1[i]) {
-                arr.add(arr1[i]);
                 i++;
             }
         }
-        while(j<m) {
-            if(arr.get(arr.size()-1) != arr2[j]) {
-                arr.add(arr2[j]);
-                j++;
+        while(i<n) {
+            if(arr.get(arr.size()-1) != a[i]) {
+                arr.add(a[i]);
             }
+            i++;
+        }
+        while(j<m) {
+            if(arr.get(arr.size()-1) != b[j]) {
+                arr.add(b[j]);
+            }
+            j++;
         }
         return arr;
     }

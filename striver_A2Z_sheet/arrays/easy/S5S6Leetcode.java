@@ -21,6 +21,10 @@ public class S5S6Leetcode {
         reverseSubArray(nums, 0, n-1);
         //return nums;
     }
+    // left rotate by k places
+    // reverse first k elements
+    // reverse last n-k elements
+    // reverse all elements
     // let's do it without callback
     public static void rightRotate2(int[] nums, int k)
     {

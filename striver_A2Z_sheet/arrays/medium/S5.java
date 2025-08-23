@@ -1,9 +1,11 @@
+import java.util.HashMap;
 import java.util.List;
 
 public class S5 {
     // striver
     // printing using kaden's algorithm
     public int maxSubArray2(int[] nums) {
+        HashMap MyMap = new HashMap<Integer, Integer>();
         int startIndex = -1;
         int endIndex = -1;
         int n = nums.length;

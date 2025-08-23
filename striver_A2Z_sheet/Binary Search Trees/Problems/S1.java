@@ -11,7 +11,6 @@ public class S1 {
     }
     int findCeil(Node root, int key) {
         if (root == null) return -1;
-        // Code here
         return findCeil(root,key,Integer.MAX_VALUE);
     }
     int findCeil(Node root, int key, int ceil) {
@@ -20,7 +19,6 @@ public class S1 {
             return root.data;
         }
         else if (key < root.data) {
-            //ceil = root.data;
             ceil = Math.min(root.data,ceil);
             return findCeil(root.left,key,ceil);
         }
